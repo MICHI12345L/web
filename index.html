@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Proyecto de Vida</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    section {
+      padding: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index:999;
+    }
+    dialog {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color:#fff;
+      box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    }
+    dialog p{
+      margin: 0;
+    }
+    .column{
+      flex: 1;
+      margin: 0 10px;
+    }
+     @media (min-width: 768px) {
+       footer{
+         position: static;
+       }
+      section {
+        flex-direction: row;
+      }
+      .column {
+        flex: 1;
+      }
+    }
+
+
+    foto1{
+      padding: 30px 0;
+      width: 272;
+      height: 92;
+
+    }
+     .contact-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        border-bottom: 2px solid #ccc;
+    }
+    #contact-info {
+        display: none;
+        margin-top: 10px;
+    }
+     .video-container2 {
+      width: 80%; /* Ancho del contenedor */
+      margin: 0 auto; /* Centrar el contenedor horizontalmente */
+      border: 2px solid; /* Borde del contenedor */
+      border-radius: 10px; /* Bordes redondeados */
+     
+    }
+
+    /* Estilos para el video */
+    video {
+      width: 100%; /* Ancho del video al 100% del contenedor */
+      height: auto; /* Altura automática según el ancho */
+      display: block; /* Para eliminar el espacio adicional debajo del video */
+    }
+  
+     .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan en múltiples filas */
+    overflow-x: auto; /* Agrega un desplazamiento horizontal si las imágenes no caben en la pantalla */
+  }
+.video-container {
+      width: 80%; /* Ancho del contenedor */
+      margin: 0 auto; /* Centrar el contenedor horizontalmente */
+      border: 2px solid #ddd; /* Borde del contenedor */
+      border-radius: 10px; /* Bordes redondeados */
+      overflow: hidden; /* Ocultar el exceso de contenido */
+    }
+
+    /* Estilos para el iframe del video */
+    iframe {
+      width: 100%; /* Ancho del iframe al 100% del contenedor */
+      height: 100%; /* Altura del iframe al 100% del contenedor */
+      display: block; /* Para eliminar el espacio adicional debajo del iframe */
+      border: none; /* Eliminar el borde del iframe */
+    }
+  .image {
+    width: 200px; /* Tamaño deseado */
+    height: 200px; /* Tamaño deseado */
+    border: 2px solid #000; /* Decoración de bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar partes de la imagen que excedan los bordes */
+    margin: 0 10px; /* Espacio entre las imágenes */
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escalar la imagen para que ocupe todo el espacio disponible sin deformarla */
+  }
+  .foto1 {
+        /* Aquí puedes aplicar los estilos que desees */
+        width: 80%; /* Por ejemplo, hacer que la imagen ocupe todo el ancho disponible */
+        max-width: 400px; /* Limitar el ancho máximo de la imagen a 400px */
+        height: auto;
+        border-radius: 10px; /* Agregar esquinas redondeadas */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra */
+    }
+    .foto2{
+       width: 80%; /* Por ejemplo, hacer que la imagen ocupe todo el ancho disponible */
+        max-width: 400px; /* Limitar el ancho máximo de la imagen a 400px */
+        height: auto;
+        border-radius: 10px; /* Agregar esquinas redondeadas */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra */
+
+    }
+
+    
+  
+  </style>
+  <script>
+    function toggleContactInfo() {
+        var contactInfo = document.getElementById("contact-info");
+        if (contactInfo.style.display === "none") {
+            contactInfo.style.display = "block";
+        } else {
+            contactInfo.style.display = "none";
+        }
+    }
+</script>
+</head>
+<body>
+  
+
+  <header>
+    <h1>Mi Proyecto de Vida</h1>
+ <button class="contact-button" onclick="toggleContactInfo()">Contáctame</button>
+ <div id="contact-info">
+    <p>Número de teléfono: +573023084777</p>
+</div>
+  </header>
+  <section>
+    <h1> LA  NIÑES.</h1>
+    <p> Todo empezo cuando nací en el año 2007 un 16 de enero...
+
+      Desde niño tuve una gran inquitud con la musica los instrumenos , en si con toda la musica
+      ya que vengo de una familia que es muy artistica , tanto asi, que cuando tenia 5 años , era navidad, 
+      y me regalaron my primera guitarra , cuenta mi madre que me puse a bricar y a llorar de la emocion por verla,
+
+      Mi niñes fue muy privilegiada , ya que por ser el primer hijo de mis padres y ser el primer sobrino de mis 
+      tios , era muy consitido y toda la atencion de la familia estaba en mi..
+    </p>
+
+    <img  src="PRIMERA FOTO.png" class="foto1">
+    
+    <p> Siempre fui muy apegado a la musica ya que mi padre y mi abuelo me lo inculcaron...</p>
+    <IMG src="SEGUNDA FOTO.png " class="foto2">
+  <h2>LA ADOLECENCIA.</h2>
+  <p> Mi adolecencia ah sido movida...
+ eh pasado por muchos colegios me ah tocado vivir en otra ciudad y volver, sin embargo eh estado 
+ muy metido en la musica , en varios consursos varias presentaciones en colegios y todo eso,
+  tambieen me eh interesado por el mundo de la<a href="https://es.wikipedia.org/wiki/Tecnolog%C3%ADa" >tegnologia</a> como la programacion y todo lo que tiene que ver con eso</p>
+ <div class="container">
+  <div class="image">
+    <img src="TERCERA FOTO.png" alt="Imagen 1">
+  </div>
+  <div class="image">
+    <img src="CUARTA FOTO.png" alt="Imagen 2">
+  </div>
+  <div class="image">
+    <img src="QUINTA FOTO.png" alt="Imagen 3">
+  </div>
+ <div class="video.container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VbU_c8nVlvA?si=IA2ac3i5PKAUqbcN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ </div>
+
+ 
+
+
+
+
+    
+  </section> 
+
+ 
+
+
+  <section>
+   
+    <h2>Objetivos a Corto Plazo</h2>
+    <ul>
+      <li>Terminar mis estudios , estudiar un curso de musica </li>
+      <li>terner presentaciones en tarimas del barrio</li>
+      <li>hacer un curso de progamacion </li>
+      <li> sacar un buen puntaje en el icfes</1>
+    </ul>
+    <button class="button" onclick="showDetails('objetivos-corto')">Detalles</button>
+    <dialog id="objetivos-corto-dialog">
+      <p>
+        <li> Para el curso de musica , es necesario ir a una academa o buscar curso en el sena
+           <a href="https://estudios.unad.edu.co/homologacion-y-validacion-musica/sena-servicio-nacional-de-aprendizaje" target="_blank">Homologación y Validación de Música en UNAD</a> </li>
+        <li> Para hacer el curso de programacion tambien buscar un curso en el sena ya que encuentro facilidad...
+           <a href="https://www.educacionit.com/cursos-de-programacion?gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppHs9lzQIWq0NgI1U9Mlh68loWhWdR7dIEuVOiges1X_wxwkxK8KbvBoCg7QQAvD_BwE&utm_campaign=co_conv_search_pyd_otros_cc_12024___&utm_medium=search&utm_source=googleads" target="_blank">Cursos de Programación en Educación IT</a></li>
+      </p>
+      <button class="button" onclick="closeDetails('objetivos-corto')">Cerrar</button>
+    </dialog>
+    </div>
+  </section>
+
+  <section>
+ 
+    <h2 id="objetivos-corto">Objetivos a Mediano Plazo</h2>
+    <ul>
+      <li>Conseguir un empleo estable ya sea con la musica  o con los cursos que tengo planeado hacer</li>
+      <li>Trabajar al mismo tiempo que estudio</li>
+      <li>Aprender otro idioma</li>
+    </ul>
+   <button class="button" onclick="showDetails('objetivos-mediano')">Detalles</button>
+    <dialog id="objetivos-mediano-dialog">
+      <p>
+  <li>Pienso ir generando contactos y amistades para que se ma haga mas facil adquirir un trabajo</li>
+  <li>Tner un buen icfes y entrar a una buena universidad , para estudiar lo que yo quiera</li>
+  <li> Hacer un cruso de ingles ya sea en el sena o en otra corporacion que me ayude 
+  <a href="https://www.sena.edu.co/es-co/formacion/Paginas/bilinguismo.aspx" target="_blank">Cursos de INGLES.</a></li>
+      </p>
+      <button class="button" onclick="closeDetails('objetivos-mediano')">Cerrar</button>
+    </dialog>
+    </div>
+  </section>
+
+  <section>
+    
+    <h2 id="objetivos-mediano">Objetivos a Largo Plazo</h2>
+    <ul>
+      <li>Terminar de estudiar mi carrera en <a href="https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n#:~:text=Programar%20viene%20a%20ser%20el,fuente%20de%20dicho%20programa%20inform%C3%A1tico.">programacion </a></li>
+      <li>Iniciar mi propio negocio</li>
+      <li>Cuando ya tenga mi negocio estudiar mi carrera de musico</li>
+      <li>Sacar mi album...</li>
+    </ul>
+     <button class="button" onclick="showDetails('objetivos-largo')">Detalles</button>
+    <dialog id="objetivos-largo-dialog">
+      <p>Esto lo tengo premeditado para h que se cumpla de 6 a 10 años , consiguir una buena estabilidad
+        economica, conseguir una buena mujer , hacer mi familia , tener un buen trabajo, que mi musica se escuche 
+        y vivir en PAZ.
+      </p>
+      <button class="button" onclick="closeDetails('objetivos-largo')">Cerrar</button>
+    </dialog>
+    </div>
+  </section>
+ 
+
+  <footer>
+    <button class="social-button" onclick="openSocialMedia('facebook')">Facebook</button>
+  <button class="social-button" onclick="openSocialMedia('instagram')">Instagram</button>
+
+    <p>&copy; 2024 Mi Proyecto de Vida_LUCAS PALACIO<p><a href="#" class="button">Volver a la Página Principal</a></p></p>
+  </footer>
+  
+   <script>
+
+    function showDetails(dialogId) {
+      var dialog = document.getElementById(dialogId + "-dialog");
+      dialog.showModal();
+    }
+
+    function closeDetails(dialogId) {
+      var dialog = document.getElementById(dialogId + "-dialog");
+      dialog.close();
+    }
+     function openSocialMedia(platform) {
+      var url = '';
+      if (platform === 'facebook') {
+        url = 'https://www.facebook.com/profile.php?id=100091683567843';
+      } else if (platform === 'instagram') {
+        url = 'https://www.instagram.com/lucas.p.g09/';
+      }
+      window.open(url, '_blank');
+    }
+  </script>
+
+
+</body>
+</html>
